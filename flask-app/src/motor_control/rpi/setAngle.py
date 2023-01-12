@@ -11,11 +11,15 @@ basePin = 3
 shoulderPin1 = 5
 shoulderPin2 = 7
 armPin = 11
+testPin = 13
 
 GPIO.setup(basePin, GPIO.OUT)
 GPIO.setup(shoulderPin1, GPIO.OUT)
 GPIO.setup(shoulderPin2, GPIO.OUT)
 GPIO.setup(armPin, GPIO.OUT)
+GPIO.setup(testPin, GPIO.OUT, initial=GPIO.HIGH)
+
+GPIO.output(testPin, True)
 
 basePWM = GPIO.PWM(basePin, 50)
 shoulderPWM1 = GPIO.PWM(shoulderPin1, 50)
